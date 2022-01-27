@@ -17,7 +17,7 @@ const Works: FunctionalComponent = () => {
           image="/assets/oh.jpg"
           roles={['Develops front-end of landing page and staff recruitment']}
           tech={['Next.js', 'React']}
-          site="https://perak.cs.ui.ac.id/"
+          site="https://oh.cs.ui.ac.id/"
         />
         <Project
           title="PERAK 2022"
