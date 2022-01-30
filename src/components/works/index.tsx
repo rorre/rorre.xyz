@@ -33,6 +33,13 @@ const Works: FunctionalComponent = () => {
           site="https://perak.cs.ui.ac.id/"
         />
         <Project
+          title="KATALY"
+          description="KATALY is a clone of WORDLE but with Indonesian words instead of English."
+          image="/assets/kataly.png"
+          tech={['Preact']}
+          site="https://kataly.rorre.xyz/"
+        />
+        <Project
           title="BNStats"
           description="BNStats is a site to look at various statistical information regarding osu!'s Beatmap Nominator activity."
           image="/assets/bnstats.png"
