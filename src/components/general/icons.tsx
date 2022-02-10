@@ -1,7 +1,7 @@
 import { SiFlask, SiNextdotjs, SiPostgresql, SiRedis } from 'react-icons/si';
 import { IoLogoNodejs, IoLogoPython, IoLogoReact } from 'react-icons/io5';
-import { IconType } from 'react-icons';
-import { Fragment, FunctionComponent, h } from 'preact';
+import { IconBaseProps, IconType } from 'react-icons';
+import { FunctionComponent, h } from 'preact';
 
 type IconTypes = {
   [key in string]: IconType;
@@ -17,16 +17,18 @@ const iconMapping: IconTypes = {
   python: IoLogoPython,
 };
 
-interface IconRowProps {
+interface IconRowProps extends IconBaseProps {
   tech: string[];
 }
 
-const IconRow: FunctionComponent<IconRowProps> = ({ tech }) => {
+const IconRow: FunctionComponent<IconRowProps> = (props) => {
   return (
     <div className="flex flex-row space-x-2">
-      {tech.map((name) => {
+      {props.tech.map((name) => {
         let Component = iconMapping[name];
-        return <Component />;
+        return (
+          <Component title={name[0].toUpperCase() + name.slice(1)} {...props} />
+        );
       })}
     </div>
   );

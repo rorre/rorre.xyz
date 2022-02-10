@@ -6,7 +6,7 @@ import { IconRow } from './icons';
 interface ProjectProps {
   title: string;
   description: string;
-  image: string;
+  image?: string;
   tech: string[];
   datetime?: string;
   site?: string;
@@ -79,9 +79,11 @@ const Project: FunctionComponent<ProjectProps> = ({
           </div>
         </div>
 
-        <div className="aspect-square max-w-[6rem] m-auto">
-          <img src={image} className="rounded-full" />
-        </div>
+        {image && (
+          <div className="aspect-square max-w-[6rem] m-auto">
+            <img src={image} className="rounded-full" />
+          </div>
+        )}
       </motion.div>
     </Fragment>
   );
