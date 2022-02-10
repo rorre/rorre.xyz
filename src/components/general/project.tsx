@@ -1,11 +1,13 @@
 import { Fragment, FunctionComponent, h } from 'preact';
 import { useState } from 'preact/hooks';
 import { motion } from 'framer-motion';
+import { IconRow } from './icons';
 
 interface ProjectProps {
   title: string;
   description: string;
   image: string;
+  tech: string[];
   datetime?: string;
   site?: string;
   github?: string;
@@ -17,6 +19,7 @@ const Project: FunctionComponent<ProjectProps> = ({
   title,
   description,
   image,
+  tech,
   datetime,
   site,
   github,
@@ -37,7 +40,11 @@ const Project: FunctionComponent<ProjectProps> = ({
         onClick={() => setShowModal(!showModal)}
       >
         <div className="flex flex-col pt-2 sm:pt-0">
-          <p className="font-sans text-lg font-bold">{title}</p>
+          <div className="flex flex-col-reverse sm:flex-row sm:space-x-2 items-center">
+            <p className="font-sans text-lg font-bold">{title}</p>
+            <IconRow tech={tech} />
+          </div>
+
           <p className="font-assistant italic text-sm">
             {role} {datetime && '| ' + datetime}
           </p>

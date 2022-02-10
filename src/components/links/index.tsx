@@ -1,4 +1,5 @@
 import { Fragment, FunctionalComponent, h } from 'preact';
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
 
 const Links: FunctionalComponent = () => {
   return (
@@ -6,10 +7,10 @@ const Links: FunctionalComponent = () => {
       <div className="flex flex-col items-center space-y-4">
         <div className="flex flex-row space-x-4 justify-center">
           <a href="https://github.com/rorre">
-            <i className="fab fa-github fa-2x opacity-80"></i>
+            <IoLogoGithub opacity={80} size={36} />
           </a>
           <a href="https://www.linkedin.com/in/rendyak/">
-            <i className="fab fa-linkedin fa-2x opacity-80"></i>
+            <IoLogoLinkedin opacity={80} size={36} />
           </a>
         </div>
       </div>

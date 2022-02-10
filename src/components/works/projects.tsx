@@ -11,6 +11,7 @@ const Projects: FunctionalComponent = () => {
         image="/assets/kataly.png"
         site="https://kataly.rorre.xyz/"
         github="https://github.com/rorre/KATALY"
+        tech={['react']}
       />
       <Project
         title="BNStats"
@@ -22,6 +23,7 @@ const Projects: FunctionalComponent = () => {
         ]}
         github="https://github.com/rorre/BNStats"
         site="https://bnstats.rorre.xyz/"
+        tech={['python', 'postgres']}
       />
     </ProjectLayout>
   );
