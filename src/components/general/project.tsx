@@ -1,6 +1,6 @@
 import { Fragment, FunctionComponent, h } from 'preact';
 import { useState } from 'preact/hooks';
-import Modal from './modal';
+import { motion } from 'framer-motion';
 
 interface ProjectProps {
   title: string;
@@ -27,7 +27,11 @@ const Project: FunctionComponent<ProjectProps> = ({
 
   return (
     <Fragment>
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        whileHover={{ scale: 1.025 }}
+        viewport={{ once: true }}
         className="flex flex-col-reverse sm:flex-row justify-between
                  bg-white sm:space-x-2 rounded-md p-4 w-full"
         onClick={() => setShowModal(!showModal)}
@@ -71,7 +75,7 @@ const Project: FunctionComponent<ProjectProps> = ({
         <div className="aspect-square max-w-[6rem] m-auto">
           <img src={image} className="rounded-full" />
         </div>
-      </div>
+      </motion.div>
     </Fragment>
   );
 };

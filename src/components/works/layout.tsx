@@ -1,4 +1,5 @@
 import { FunctionComponent, h } from 'preact';
+import { motion } from 'framer-motion';
 
 interface LayoutProps {
   id?: string;
@@ -21,7 +22,10 @@ const ProjectLayout: FunctionComponent<LayoutProps> = ({
         (alternate ? 'bg-gray-800' : 'bg-gray-200')
       }
     >
-      <h2
+      <motion.h2
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         className={
           'font-montserrat font-bold text-4xl ' +
           'text-center md:text-right pb-8 md:w-1/5 flex-none ' +
@@ -29,7 +33,7 @@ const ProjectLayout: FunctionComponent<LayoutProps> = ({
         }
       >
         {title}
-      </h2>
+      </motion.h2>
       <div className="hidden md:block md:w-1 rounded-full bg-gray-500" />
       <div className="flex flex-col space-y-2 grow">{children}</div>
     </div>
