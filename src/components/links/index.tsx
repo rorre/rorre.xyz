@@ -2,7 +2,7 @@ import { Fragment, FunctionalComponent, h } from 'preact';
 
 const Links: FunctionalComponent = () => {
   return (
-    <div id="links" className="py-8 bg-gray-200">
+    <div id="links" className="py-8 bg-gray-800 text-white">
       <div className="flex flex-col items-center space-y-4">
         <div className="flex flex-row space-x-4 justify-center">
           <a href="https://github.com/rorre">

@@ -6,88 +6,45 @@ interface ProjectProps {
   title: string;
   description: string;
   image: string;
+  datetime?: string;
   site?: string;
   github?: string;
+  role?: string;
   roles?: string[];
-  tech?: string[];
 }
 
 const Project: FunctionComponent<ProjectProps> = ({
   title,
   description,
   image,
+  datetime,
   site,
   github,
+  role,
   roles,
-  tech,
 }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <Fragment>
-      <Modal setShow={setShowModal} show={showModal} title={title}>
-        <div className="aspect-square max-w-[8rem] mx-auto">
-          <img src={image} className="rounded-full" />
-        </div>
-
-        <div className="flex flex-row space-x-4 text-center mx-auto">
-          {site && (
-            <a
-              href={site}
-              onClick={(e) => e.stopPropagation()}
-              className="font-sans font-bold text-sky-700
-                           transition hover:underline hover:text-sky-600"
-            >
-              Site URL
-            </a>
-          )}
-          {github && (
-            <a
-              href={github}
-              onClick={(e) => e.stopPropagation()}
-              className="font-sans font-bold text-sky-700
-                           transition hover:underline hover:text-sky-600"
-            >
-              Repository
-            </a>
-          )}
-        </div>
-
-        <p className="font-assistant">{description}</p>
-
-        <hr className="border border-gray-800 border-opacity-10" />
-
-        <h3 className="font-sans font-bold">Roles</h3>
-        <ul className="list-disc pl-4">
-          {roles ? (
-            roles.map((value) => <li className="font-assistant">{value}</li>)
-          ) : (
-            <li className="font-assistant">Unspecified</li>
-          )}
-        </ul>
-
-        <hr className="border border-gray-800 border-opacity-10" />
-
-        <h3 className="font-sans font-bold">Technologies Used</h3>
-        <ul className="list-disc  pl-4">
-          {tech ? (
-            tech.map((value) => <li className="font-assistant">{value}</li>)
-          ) : (
-            <li className="font-assistant">Unspecified</li>
-          )}
-        </ul>
-      </Modal>
       <div
         className="flex flex-col-reverse sm:flex-row justify-between
-                 bg-white sm:space-x-2 rounded p-4 w-full cursor-pointer"
+                 bg-white sm:space-x-2 rounded-md p-4 w-full"
         onClick={() => setShowModal(!showModal)}
       >
         <div className="flex flex-col pt-2 sm:pt-0">
           <p className="font-sans text-lg font-bold">{title}</p>
-          <p className="font-assistant text-sm sm:max-w-[16rem]">
-            {description}
+          <p className="font-assistant italic text-sm">
+            {role} {datetime && '| ' + datetime}
           </p>
-          <div className="flex flex-row justify-between pt-2 mt-auto">
+          <p className="font-assistant">{description}</p>
+
+          <ul className="list-disc text-sm pl-5">
+            {roles &&
+              roles.map((value) => <li className="font-assistant">{value}</li>)}
+          </ul>
+
+          <div className="flex flex-row justify-between pt-2 mt-auto max-w-[10rem]">
             {site && (
               <a
                 href={site}
@@ -111,7 +68,7 @@ const Project: FunctionComponent<ProjectProps> = ({
           </div>
         </div>
 
-        <div className="aspect-square max-w-[8rem] m-auto">
+        <div className="aspect-square max-w-[6rem] m-auto">
           <img src={image} className="rounded-full" />
         </div>
       </div>
