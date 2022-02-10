@@ -13,7 +13,7 @@ const Works: FunctionalComponent = () => {
         roles={['Develops front-end of landing page and staff recruitment']}
         site="https://oh.cs.ui.ac.id/"
         datetime="July 2021 - November 2021"
-        tech={['node', 'react', 'nextjs']}
+        tech={['node', 'react', 'nextjs', 'typescript']}
       />
       <Project
         title="PERAK 2022"
@@ -27,7 +27,15 @@ const Works: FunctionalComponent = () => {
         ]}
         site="https://perak.cs.ui.ac.id/"
         datetime="December 2021 - Present"
-        tech={['node', 'react', 'nextjs', 'redis']}
+        tech={[
+          'node',
+          'react',
+          'nextjs',
+          'redis',
+          'typescript',
+          'strapi',
+          'javascript',
+        ]}
       />
     </ProjectLayout>
   );

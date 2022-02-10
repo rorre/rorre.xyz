@@ -1,5 +1,18 @@
-import { SiFlask, SiNextdotjs, SiPostgresql, SiRedis } from 'react-icons/si';
-import { IoLogoNodejs, IoLogoPython, IoLogoReact } from 'react-icons/io5';
+import {
+  SiFastapi,
+  SiFlask,
+  SiNextdotjs,
+  SiPostgresql,
+  SiRedis,
+  SiStrapi,
+  SiTypescript,
+} from 'react-icons/si';
+import {
+  IoLogoJavascript,
+  IoLogoNodejs,
+  IoLogoPython,
+  IoLogoReact,
+} from 'react-icons/io5';
 import { IconBaseProps, IconType } from 'react-icons';
 import { FunctionComponent, h } from 'preact';
 
@@ -15,6 +28,10 @@ const iconMapping: IconTypes = {
   postgres: SiPostgresql,
   nextjs: SiNextdotjs,
   python: IoLogoPython,
+  fastapi: SiFastapi,
+  typescript: SiTypescript,
+  javascript: IoLogoJavascript,
+  strapi: SiStrapi,
 };
 
 interface IconRowProps extends IconBaseProps {
