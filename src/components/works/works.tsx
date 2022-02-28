@@ -22,8 +22,8 @@ const Works: FunctionalComponent = () => {
         role="Web Developer"
         roles={[
           'Implements group invitational code with timeout using Redis',
-          "Part of 'Experienced Staff' to aid staffs with code helps",
-          'Reviews code from other staffs before merging',
+          'Implements 3rd party games framing and score submission with cross window messaging',
+          'Implements simple score tampering protection logic with AES and Redis',
         ]}
         site="https://perak.cs.ui.ac.id/"
         datetime="December 2021 - Present"

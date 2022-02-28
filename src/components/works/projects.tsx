@@ -16,16 +16,7 @@ const Projects: FunctionalComponent = () => {
       <Project
         title="Tutor Angkatan Bakung"
         description="A collaborative site for people in University of Indonesia's Faculty of Computer Science to open and organize tutor events."
-        tech={[
-          'python',
-          'fastapi',
-          'node',
-          'typescript',
-          'react',
-          'nextjs',
-          'redis',
-          'postgres',
-        ]}
+        tech={['python', 'fastapi', 'node', 'typescript', 'nextjs']}
         github="https://github.com/rorre/frames2osb"
         site="https://ta.rorre.xyz/"
       />
@@ -39,7 +30,7 @@ const Projects: FunctionalComponent = () => {
         ]}
         github="https://github.com/rorre/BNStats"
         site="https://bnstats.rorre.xyz/"
-        tech={['python', 'postgres']}
+        tech={['python']}
       />
       <Project
         title="DDPValidator"
@@ -56,7 +47,7 @@ const Projects: FunctionalComponent = () => {
       <Project
         title="ModRequests"
         description="Personal website to organize osu! Beatmap Nominator mod requests and nominations."
-        tech={['python', 'flask', 'postgres']}
+        tech={['python', 'flask']}
         github="https://github.com/rorre/ModRequests"
       />
       <Project
