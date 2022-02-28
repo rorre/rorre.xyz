@@ -50,10 +50,6 @@ const Header: FunctionalComponent = () => {
               </Button>
             </a>
           </div>
-          {/* <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 pl-3">
-                        <a href="https://github.com/rorre"><i className="fab fa-github fa-lg opacity-80"></i></a>
-                        <a href="https://github.com/rorre"><i className="fab fa-linkedin fa-lg opacity-80"></i></a>
-                    </div> */}
         </div>
 
         <div className="md:max-h-[24rem]">
