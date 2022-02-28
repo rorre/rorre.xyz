@@ -18,6 +18,17 @@ const Header: FunctionalComponent = () => {
           you wouldn't be able to see it here. You can ask for it though! Shoot
           me a DM somewhere and I might give you.
         </p>
+        <hr className="border-t border-slate-500" />
+        <p>
+          Artwork is made by{' '}
+          <a
+            href="https://twitter.com/JoyfulTora"
+            className="font-sans text-sky-600 transition hover:underline hover:text-sky-800"
+          >
+            @JoyfulTora
+          </a>{' '}
+          on Twitter!
+        </p>
       </Modal>
       <div
         className="flex flex-col-reverse md:flex-row items-center justify-center md:justify-between
