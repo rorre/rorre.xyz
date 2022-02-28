@@ -7,12 +7,14 @@ import {
   SiStrapi,
   SiTypescript,
 } from 'react-icons/si';
+
 import {
   IoLogoJavascript,
   IoLogoNodejs,
   IoLogoPython,
   IoLogoReact,
 } from 'react-icons/io5';
+
 import { IconBaseProps, IconType } from 'react-icons';
 import { FunctionComponent, h } from 'preact';
 

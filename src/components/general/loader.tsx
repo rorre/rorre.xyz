@@ -1,6 +1,7 @@
 import { Fragment, FunctionalComponent, h } from 'preact';
 import type { ComponentChildren } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 interface LoaderProps {
   children: ComponentChildren;
@@ -26,7 +27,7 @@ const Loader: FunctionalComponent<LoaderProps> = ({ children }) => {
           (isGone && 'hidden')
         }
       >
-        <i class="fas fa-circle-notch fa-3x animate-spin text-white"></i>
+        <AiOutlineLoading3Quarters className="w-12 h-12 stroke-2 animate-spin text-white" />
       </div>
       <div
         className={'z-0 ' + (isLoading && 'w-screen h-screen overflow-hidden')}
