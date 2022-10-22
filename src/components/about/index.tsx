@@ -7,7 +7,7 @@ const About: FunctionalComponent = () => {
         About Me
       </h2>
       <div
-        className="px-8 sm:px-16 md:px-32 lg:px-64 2xl:px-96 3xl:px-[30rem] font-assistant pb-4
+        className="px-8 sm:px-16 md:px-32 lg:px-64 xl:px-0 mx-auto container xl:!max-w-5xl font-assistant pb-4
                       flex flex-col space-y-2"
       >
         <p>

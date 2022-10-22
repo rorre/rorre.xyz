@@ -36,7 +36,7 @@ const Modal: FunctionalComponent<ModalProps> = ({
     >
       <div
         ref={innerModal}
-        className="relative w-full bg-gray-200 p-4 animate-[falling_0.4s]"
+        className="relative bg-gray-200 p-4 animate-[falling_0.4s] container xl:!max-w-5xl mx-auto"
       >
         <span
           className="top-2 right-3 text-4xl absolute cursor-pointer"
