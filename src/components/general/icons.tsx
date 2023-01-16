@@ -1,9 +1,11 @@
 import {
   SiFastapi,
   SiFlask,
+  SiGo,
   SiNextdotjs,
   SiPostgresql,
   SiRedis,
+  SiRust,
   SiStrapi,
   SiTypescript,
 } from 'react-icons/si';
@@ -34,6 +36,8 @@ const iconMapping: IconTypes = {
   typescript: SiTypescript,
   javascript: IoLogoJavascript,
   strapi: SiStrapi,
+  rust: SiRust,
+  golang: SiGo,
 };
 
 interface IconRowProps extends IconBaseProps {

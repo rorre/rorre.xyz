@@ -33,6 +33,18 @@ const Projects: FunctionalComponent = () => {
         tech={['python']}
       />
       <Project
+        title="osu! Difficulty Calculator IPC"
+        description="An external program to run an IPC server that interacts with osu! stable client to provide new difficulty calculator."
+        tech={['rust']}
+        github="https://github.com/rorre/osu-ipc-rust"
+      />
+      <Project
+        title="osu! Discussion Votes"
+        description="A tampermonkey script and server to add up/downvote functionality in discussion pages."
+        tech={['golang', 'typescript']}
+        github="https://github.com/rorre/osu-discussion-votes"
+      />
+      <Project
         title="DDPValidator"
         description="A tool for people in 2021 class of Programming Basics in University of Indonesia's Faculty of Computer Science to check their assignment if it is up to specs."
         tech={['python']}
