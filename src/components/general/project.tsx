@@ -1,5 +1,4 @@
 import { Fragment, FunctionComponent } from 'preact';
-import { useState } from 'preact/hooks';
 import { motion } from 'framer-motion';
 import { IconRow } from './icons';
 
@@ -26,8 +25,6 @@ const Project: FunctionComponent<ProjectProps> = ({
   role,
   roles,
 }) => {
-  const [showModal, setShowModal] = useState(false);
-
   return (
     <Fragment>
       <motion.div
@@ -37,7 +34,6 @@ const Project: FunctionComponent<ProjectProps> = ({
         viewport={{ once: true }}
         className="flex flex-col-reverse sm:flex-row justify-between
                  bg-white sm:space-x-2 rounded-md p-4 w-full"
-        onClick={() => setShowModal(!showModal)}
       >
         <div className="flex flex-col pt-2 sm:pt-0">
           <div className="flex flex-col-reverse sm:flex-row sm:space-x-2 items-center">
