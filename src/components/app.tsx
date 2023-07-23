@@ -7,11 +7,11 @@ import { Projects, Works } from './works';
 const App: FunctionalComponent = () => {
   return (
     <div>
-        <Header />
-        <About />
-        <Works />
-        <Projects />
-        <Links />
+      <Header />
+      <About />
+      <Works />
+      <Projects />
+      <Links />
     </div>
   );
 };
