@@ -1,4 +1,4 @@
-import { FunctionalComponent, h } from 'preact';
+import { FunctionalComponent } from 'preact';
 import About from './about';
 import Loader from './general/loader';
 import Header from './header';

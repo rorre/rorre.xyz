@@ -1,4 +1,4 @@
-import { Fragment, FunctionComponent, h } from 'preact';
+import { Fragment, FunctionComponent } from 'preact';
 import { useState } from 'preact/hooks';
 import { motion } from 'framer-motion';
 import { IconRow } from './icons';

@@ -1,4 +1,4 @@
-import { Fragment, FunctionalComponent, h } from 'preact';
+import { Fragment, FunctionalComponent } from 'preact';
 import type { ComponentChildren } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
@@ -27,7 +27,7 @@ const Loader: FunctionalComponent<LoaderProps> = ({ children }) => {
           (isGone && 'hidden')
         }
       >
-        <AiOutlineLoading3Quarters className="w-12 h-12 stroke-2 animate-spin text-white" />
+        <AiOutlineLoading3Quarters size={"3rem"} />
       </div>
       <div
         className={'z-0 ' + (isLoading && 'w-screen h-screen overflow-hidden')}

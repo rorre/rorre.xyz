@@ -1,4 +1,4 @@
-import { FunctionalComponent, h } from 'preact';
+import { FunctionalComponent } from 'preact';
 import { useRef } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
 

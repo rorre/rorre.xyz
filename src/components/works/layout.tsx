@@ -1,4 +1,4 @@
-import { FunctionComponent, h } from 'preact';
+import { FunctionComponent } from 'preact';
 import { motion } from 'framer-motion';
 
 interface LayoutProps {

@@ -1,4 +1,4 @@
-import { Fragment, FunctionalComponent, h } from 'preact';
+import { Fragment, FunctionalComponent } from 'preact';
 import { useState } from 'preact/hooks';
 import Button from '../general/button';
 import Modal from '../general/modal';

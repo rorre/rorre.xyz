@@ -1,4 +1,4 @@
-import { FunctionalComponent, h } from 'preact';
+import { FunctionalComponent } from 'preact';
 import type { ComponentChildren } from 'preact';
 
 interface ButtonProps {

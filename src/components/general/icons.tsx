@@ -18,7 +18,7 @@ import {
 } from 'react-icons/io5';
 
 import { IconBaseProps, IconType } from 'react-icons';
-import { FunctionComponent, h } from 'preact';
+import { FunctionComponent } from 'preact';
 
 type IconTypes = {
   [key in string]: IconType;
