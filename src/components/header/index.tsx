@@ -36,7 +36,7 @@ const Header: FunctionalComponent = () => {
                      text-white text-xl font-montserrat font-bold container m-auto h-full"
         >
           <div className="md:max-h-[24rem]">
-            <img src="/assets/shizu.png" />
+            <img src="/assets/shizu.png" width={336} height={400} />
             <p
               onClick={() => setShowModal(true)}
               className="font-assistant text-sm text-center font-normal pt-2 underline cursor-pointer"
