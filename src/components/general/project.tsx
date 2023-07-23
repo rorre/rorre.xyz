@@ -1,4 +1,4 @@
-import { Fragment, FunctionComponent } from 'preact';
+import { FunctionComponent } from 'preact';
 import { motion } from 'framer-motion';
 import { IconRow } from './icons';
 
@@ -26,62 +26,60 @@ const Project: FunctionComponent<ProjectProps> = ({
   roles,
 }) => {
   return (
-    <Fragment>
-      <motion.div
-        initial={{ opacity: 0, y: 25 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        whileHover={{ scale: 1.025 }}
-        viewport={{ once: true }}
-        className="flex flex-col-reverse sm:flex-row justify-between
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.025 }}
+      viewport={{ once: true }}
+      className="flex flex-col-reverse sm:flex-row justify-between
                  bg-white sm:space-x-2 rounded-md p-4 w-full"
-      >
-        <div className="flex flex-col pt-2 sm:pt-0">
-          <div className="flex flex-col-reverse sm:flex-row sm:space-x-2 items-center">
-            <p className="font-sans text-lg font-bold">{title}</p>
-            <IconRow tech={tech} />
-          </div>
-
-          <p className="font-assistant italic text-sm">
-            {role} {datetime && '| ' + datetime}
-          </p>
-          <p className="font-assistant">{description}</p>
-
-          <ul className="list-disc text-sm pl-5">
-            {roles &&
-              roles.map((value) => <li className="font-assistant">{value}</li>)}
-          </ul>
-
-          <div className="flex flex-row justify-between pt-2 mt-auto max-w-[10rem]">
-            {site && (
-              <a
-                href={site}
-                onClick={(e) => e.stopPropagation()}
-                className="font-sans font-bold text-sky-700
-                           transition hover:underline hover:text-sky-600"
-              >
-                Site URL
-              </a>
-            )}
-            {github && (
-              <a
-                href={github}
-                onClick={(e) => e.stopPropagation()}
-                className="font-sans font-bold text-sky-700
-                           transition hover:underline hover:text-sky-600"
-              >
-                Repository
-              </a>
-            )}
-          </div>
+    >
+      <div className="flex flex-col pt-2 sm:pt-0">
+        <div className="flex flex-col-reverse sm:flex-row sm:space-x-2 items-center">
+          <p className="font-sans text-lg font-bold">{title}</p>
+          <IconRow tech={tech} />
         </div>
 
-        {image && (
-          <div className="aspect-square max-w-[6rem] m-auto">
-            <img src={image} className="rounded-full" />
-          </div>
-        )}
-      </motion.div>
-    </Fragment>
+        <p className="font-assistant italic text-sm">
+          {role} {datetime && '| ' + datetime}
+        </p>
+        <p className="font-assistant">{description}</p>
+
+        <ul className="list-disc text-sm pl-5">
+          {roles &&
+            roles.map((value) => <li className="font-assistant">{value}</li>)}
+        </ul>
+
+        <div className="flex flex-row justify-between pt-2 mt-auto max-w-[10rem]">
+          {site && (
+            <a
+              href={site}
+              onClick={(e) => e.stopPropagation()}
+              className="font-sans font-bold text-sky-700
+                           transition hover:underline hover:text-sky-600"
+            >
+              Site URL
+            </a>
+          )}
+          {github && (
+            <a
+              href={github}
+              onClick={(e) => e.stopPropagation()}
+              className="font-sans font-bold text-sky-700
+                           transition hover:underline hover:text-sky-600"
+            >
+              Repository
+            </a>
+          )}
+        </div>
+      </div>
+
+      {image && (
+        <div className="aspect-square max-w-[6rem] m-auto">
+          <img src={image} className="rounded-full" />
+        </div>
+      )}
+    </motion.div>
   );
 };
 
