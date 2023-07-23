@@ -40,8 +40,8 @@ const Header: FunctionalComponent = () => {
     async function start() {
       let i = 0;
       while (true) {
-        await writeWord(ROLES[i]);
         await sleep(PAUSE_DELAY);
+        await writeWord(ROLES[i]);
         i = (i + 1) % ROLES.length;
       }
     }
