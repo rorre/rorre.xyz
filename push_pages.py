@@ -14,7 +14,7 @@ res = subprocess.run("npm run build", shell=True)
 res.check_returncode()
 
 ghp_import(
-    "build",
+    "dist",
     mesg="Import from cmd",
     cname=cname,
     nojekyll=True,

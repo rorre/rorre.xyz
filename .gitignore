@@ -3,3 +3,4 @@ node_modules
 /*.log
 .mypy_cache
 size-plugin.json
+dist
