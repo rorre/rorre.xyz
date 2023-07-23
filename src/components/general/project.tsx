@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'preact';
 import { motion } from 'framer-motion';
 import { IconRow } from './icons';
+import Box from './box';
 
 interface ProjectProps {
   title: string;
@@ -26,14 +27,7 @@ const Project: FunctionComponent<ProjectProps> = ({
   roles,
 }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      whileHover={{ scale: 1.025 }}
-      viewport={{ once: true }}
-      className="flex flex-col-reverse sm:flex-row justify-between
-                 bg-white sm:space-x-2 rounded-md p-4 w-full"
-    >
+    <Box className="flex flex-col-reverse sm:flex-row justify-between w-full sm:space-x-2">
       <div className="flex flex-col pt-2 sm:pt-0">
         <div className="flex flex-col-reverse sm:flex-row sm:space-x-2 items-center">
           <p className="font-sans text-lg font-bold">{title}</p>
@@ -79,7 +73,7 @@ const Project: FunctionComponent<ProjectProps> = ({
           <img src={image} className="rounded-full" />
         </div>
       )}
-    </motion.div>
+    </Box>
   );
 };
 
