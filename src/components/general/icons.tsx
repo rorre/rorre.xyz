@@ -1,4 +1,5 @@
 import {
+  SiDocker,
   SiFastapi,
   SiFlask,
   SiGo,
@@ -17,6 +18,8 @@ import {
   IoLogoReact,
 } from 'react-icons/io5';
 
+import { BiLogoJava } from 'react-icons/bi';
+
 import { IconBaseProps, IconType } from 'react-icons';
 import { FunctionComponent } from 'preact';
 
@@ -24,7 +27,7 @@ type IconTypes = {
   [key in string]: IconType;
 };
 
-const iconMapping: IconTypes = {
+const iconMapping = {
   react: IoLogoReact,
   flask: SiFlask,
   node: IoLogoNodejs,
@@ -38,10 +41,13 @@ const iconMapping: IconTypes = {
   strapi: SiStrapi,
   rust: SiRust,
   golang: SiGo,
-};
+  docker: SiDocker,
+  java: BiLogoJava,
+} satisfies IconTypes;
 
+type IconKeys = keyof typeof iconMapping;
 interface IconRowProps extends IconBaseProps {
-  tech: string[];
+  tech: IconKeys[];
 }
 
 const IconRow: FunctionComponent<IconRowProps> = (props) => {
@@ -58,3 +64,4 @@ const IconRow: FunctionComponent<IconRowProps> = (props) => {
 };
 
 export { iconMapping, IconRow };
+export type { IconKeys };

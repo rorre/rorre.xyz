@@ -38,7 +38,7 @@ const Works: FunctionalComponent = () => {
         ]}
       />
       <Project
-        title="COMPFEST 2022"
+        title="COMPFEST 14"
         description="COMPFEST is The biggest annual IT event organized by students of the Faculty of Computer Science, University of Indonesia."
         image="/assets/compfest.webp"
         role="Web Developer"
@@ -63,6 +63,44 @@ const Works: FunctionalComponent = () => {
         ]}
         datetime="August 2022 - December 2022"
         tech={['python']}
+      />
+      <Project
+        title="Open House Fasilkom UI 2021"
+        description="Open House Fasilkom UI is an event where Computer Science students of University of Indonesia introduces their faculty to highschool students."
+        image="/assets/oh.jpg"
+        role="Person in Charge for Web Developer"
+        roles={[
+          'Led a team of 4 people',
+          'Managed deployment of the website using containerized environment via Docker',
+        ]}
+        site="https://oh.cs.ui.ac.id/"
+        datetime="Jul 2022 - Nov 2022"
+        tech={['node', 'react', 'nextjs', 'typescript', 'docker']}
+      />
+      <Project
+        title="Computer Science Faculty of Universitas of Indonesia"
+        description=""
+        image="/assets/csui.png"
+        role="Teaching Assistant for Programming Foundations 2"
+        roles={[
+          "Reviews students' assignments weekly",
+          "Creates problemset for students' weekly assignment",
+        ]}
+        datetime="Jan 2023 - June 2023"
+        tech={['java']}
+      />
+      <Project
+        title="COMPFEST 15"
+        description="COMPFEST is The biggest annual IT event organized by students of the Faculty of Computer Science, University of Indonesia."
+        image="/assets/compfest.webp"
+        role="Web Developer"
+        roles={[
+          'Maintained the system used for CTF competition event',
+          'Created web-based security challenges',
+        ]}
+        site="https://compfest.id/"
+        datetime="Mar 2023 - Present"
+        tech={['docker']}
       />
     </ProjectLayout>
   );

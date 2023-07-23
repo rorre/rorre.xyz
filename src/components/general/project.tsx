@@ -1,12 +1,12 @@
 import { FunctionComponent } from 'preact';
-import { IconRow } from './icons';
+import { IconKeys, IconRow } from './icons';
 import Box from './box';
 
 interface ProjectProps {
   title: string;
   description: string;
   image?: string;
-  tech: string[];
+  tech: IconKeys[];
   datetime?: string;
   site?: string;
   github?: string;
