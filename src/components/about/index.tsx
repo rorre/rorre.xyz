@@ -1,16 +1,16 @@
 import { FunctionalComponent } from 'preact';
 import Box from '../general/box';
-import { useEffect, useState } from 'preact/hooks';
-import { IoCode, IoLogoGithub } from 'react-icons/io5';
+// import { useEffect, useState } from 'preact/hooks';
+// import { IoCode, IoLogoGithub } from 'react-icons/io5';
 
 const About: FunctionalComponent = () => {
-  const [repoCount, setRepoCount] = useState(-1);
+  // const [repoCount, setRepoCount] = useState(-1);
 
-  useEffect(() => {
-    fetch('https://api.github.com/users/rorre')
-      .then((r) => r.json())
-      .then((res) => setRepoCount(res.public_repos));
-  }, []);
+  // useEffect(() => {
+  //   fetch('https://api.github.com/users/rorre')
+  //     .then((r) => r.json())
+  //     .then((res) => setRepoCount(res.public_repos));
+  // }, []);
 
   return (
     <div id="about" className="py-8 bg-gray-200">

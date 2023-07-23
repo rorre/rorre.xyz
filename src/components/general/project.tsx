@@ -1,5 +1,4 @@
 import { FunctionComponent } from 'preact';
-import { motion } from 'framer-motion';
 import { IconRow } from './icons';
 import Box from './box';
 
