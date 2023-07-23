@@ -65,7 +65,7 @@ const Works: FunctionalComponent = () => {
         tech={['python']}
       />
       <Project
-        title="Open House Fasilkom UI 2021"
+        title="Open House Fasilkom UI 2022"
         description="Open House Fasilkom UI is an event where Computer Science students of University of Indonesia introduces their faculty to highschool students."
         image="/assets/oh.jpg"
         role="Person in Charge for Web Developer"
