@@ -7,7 +7,6 @@ interface ModalProps {
   setShow: (arg0: boolean) => void;
   title: string;
   children?: ComponentChildren;
-  className?: string;
 }
 
 const Modal: FunctionalComponent<ModalProps> = ({
@@ -15,7 +14,6 @@ const Modal: FunctionalComponent<ModalProps> = ({
   setShow,
   title,
   children,
-  className,
 }) => {
   const outerModal = useRef<HTMLDivElement>(null);
   const innerModal = useRef<HTMLDivElement>(null);
