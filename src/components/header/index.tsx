@@ -1,55 +1,75 @@
 import { Fragment, FunctionalComponent } from 'preact';
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import Button from '../general/button';
-import Modal from '../general/modal';
+
+const ROLES = [
+  'Software Engineer',
+  'Full Stack Engineer',
+  'Computer Science Student',
+];
+const PAUSE_DELAY = 1000;
+const TYPE_DELAY = 75;
+
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 const Header: FunctionalComponent = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [word, setWord] = useState('');
   const onButtonClick = (target: string) => {
     document.querySelector(target)!.scrollIntoView({
       behavior: 'smooth',
     });
   };
+
+  async function writeWord(word: string) {
+    for (let i = 0; i < word.length; i++) {
+      const newWord = word.substring(0, i + 1);
+      setWord(newWord);
+      await sleep(TYPE_DELAY);
+    }
+    await sleep(PAUSE_DELAY);
+    for (let i = word.length; i >= 0; i--) {
+      const newWord = word.substring(0, i);
+      setWord(newWord);
+      await sleep(TYPE_DELAY);
+    }
+  }
+
+  useEffect(() => {
+    async function start() {
+      let i = 0;
+      while (true) {
+        await writeWord(ROLES[i]);
+        await sleep(PAUSE_DELAY);
+        i = (i + 1) % ROLES.length;
+      }
+    }
+    start();
+  }, []);
+
   return (
     <Fragment>
-      <Modal show={showModal} setShow={setShowModal} title="What's This?">
-        <p>
-          This is my fursona! His name is Shizu. There are more arts of him, but
-          you wouldn't be able to see it here. You can ask for it though! Shoot
-          me a DM somewhere and I might give you.
-        </p>
-        <hr className="border-t border-slate-500" />
-        <p>
-          Artwork is made by{' '}
-          <a
-            href="https://twitter.com/koudeinn"
-            className="font-sans text-sky-600 transition hover:underline hover:text-sky-800"
-          >
-            @koudeinn
-          </a>{' '}
-          on Twitter!
-        </p>
-      </Modal>
       <div className="h-screen md:h-auto md:min-h-[16rem] md:max-h-screen bg-teal-800 py-16 px-8 sm:px-16 md:px-32 lg:px-64 2xl:px-96 3xl:px-[30rem] ">
         <div
           className="flex flex-col md:flex-row items-center justify-center md:gap-24
                      text-white text-xl font-montserrat font-bold container m-auto h-full"
         >
-          <div className="md:max-h-[24rem]">
-            <img src="/assets/shizu.png" width={336} height={400} />
-            <p
-              onClick={() => setShowModal(true)}
-              className="font-assistant text-sm text-center font-normal pt-2 underline cursor-pointer"
-            >
-              What's this?
-            </p>
+          <div className="w-full">
+            <img
+              src="/assets/shizu.png"
+              className="mx-auto md:mx-0 md:float-right"
+              width={336}
+              height={400}
+            />
           </div>
 
-          <div className="flex flex-col space-y-2 pt-4 md:pt-0">
-            <div className="flex flex-col border-l-4 pl-2">
-              <p>Hello, I'm Ren.</p>
-              <p className="font-assistant font-normal text-base">
-                I am a web developer and a CS student.
+          <div className="flex flex-col space-y-2 pt-4 md:pt-0 w-full">
+            <div className="text-2xl flex flex-col border-l-4 pl-2">
+              <h1 className="font-bold">Hello, I'm Ren.</h1>
+              <p className="font-assistant font-normal text-lg">
+                I am a {word}
+                <span className="border-l-2 border-l-gray-500 h-full animate-pulse transition-all" />
               </p>
             </div>
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 pl-3">
