@@ -22,7 +22,7 @@ const Loader: FunctionalComponent<LoaderProps> = ({ children }) => {
       <div
         className={
           'w-screen h-screen bg-teal-800 z-50 fixed top-0 left-0  ' +
-          'flex flex-col items-center justify-center transition-opacity duration-300 ' +
+          'flex flex-col items-center justify-center transition-opacity duration-300 text-white ' +
           (isLoading ? 'opacity-100 ' : 'opacity-0 ') +
           (isGone && 'hidden')
         }
