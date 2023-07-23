@@ -15,7 +15,7 @@ const Button: FunctionalComponent<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={'p-2 border text-sm rounded ' + className}
+      className={'px-3 py-1.5 border text-sm rounded ' + className}
     >
       {children}
     </button>
