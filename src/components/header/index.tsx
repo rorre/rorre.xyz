@@ -1,6 +1,7 @@
 import { Fragment, FunctionalComponent } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import Button from '../general/button';
+import { FiArrowUpRight } from 'react-icons/fi';
 
 const ROLES = [
   'Software Engineer',
@@ -88,6 +89,9 @@ const Header: FunctionalComponent = () => {
               <a href="https://blog.rorre.xyz">
                 <Button className="transition hover:cursor-pointer hover:bg-teal-700 w-full">
                   Blog
+                  <i className="inline-block align-middle">
+                    <FiArrowUpRight size={14} />
+                  </i>
                 </Button>
               </a>
             </div>
