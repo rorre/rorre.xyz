@@ -1,4 +1,5 @@
 import {
+  SiAndroid,
   SiDocker,
   SiFastapi,
   SiFlask,
@@ -43,6 +44,7 @@ const iconMapping = {
   golang: SiGo,
   docker: SiDocker,
   java: BiLogoJava,
+  android: SiAndroid,
 } satisfies IconTypes;
 
 type IconKeys = keyof typeof iconMapping;
