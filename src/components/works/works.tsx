@@ -96,7 +96,9 @@ const Works: FunctionalComponent = () => {
         role="Web Developer"
         roles={[
           'Maintained the system used for CTF competition event',
-          'Created web-based security challenges',
+          'Created web security, reverse engineering, and forensics challenges',
+          'Managed multiple machines and its internal network in an Attack-Defense environment.' +
+            ' <a href="https://blog.rorre.me/post/building-attack-defense-ctf" class="text-blue-500">Blog post</a>',
         ]}
         site="https://compfest.id/"
         datetime="Mar 2023 - Present"
