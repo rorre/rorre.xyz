@@ -36,9 +36,8 @@ const About: FunctionalComponent = () => {
 
         <Box className="flex flex-col gap-1 relative justify-end h-full">
           <strong className="text-2xl text-teal-800 font-bold">
-            CTF Problem Setter + Technical Committee
+            Full Stack Developer
           </strong>
-          <p>COMPFEST 15</p>
           <strong className="font-bold">Current Work</strong>
         </Box>
 
