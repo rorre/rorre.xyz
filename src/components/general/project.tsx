@@ -40,7 +40,12 @@ const Project: FunctionComponent<ProjectProps> = ({
 
         <ul className="list-disc text-sm pl-5">
           {roles &&
-            roles.map((value) => <li className="font-assistant">{value}</li>)}
+            roles.map((value) => (
+              <li
+                className="font-assistant"
+                dangerouslySetInnerHTML={{ __html: value }}
+              ></li>
+            ))}
         </ul>
 
         <div className="flex flex-row justify-between pt-2 mt-auto max-w-[10rem]">
