@@ -9,7 +9,7 @@ const Works: FunctionalComponent = () => {
         title="COMPFEST 15"
         description="COMPFEST is The biggest annual IT event organized by students of the Faculty of Computer Science, University of Indonesia."
         image="/assets/compfest.webp"
-        role="Web Developer"
+        role="CTF Committee"
         roles={[
           'Maintained the system used for CTF competition event',
           'Created web security, reverse engineering, and forensics challenges',
